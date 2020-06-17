@@ -3,7 +3,7 @@
 <body>
 
 <h1>DATABASE CONNECTION</h1>
-
+<h2>Ti dang ngu nguoi</h2>
 <?php
 ini_set('display_errors', 1);
 echo "Hello Cloud computing class 0818!";
