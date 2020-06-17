@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .float{
+                float: left;
+            }
+            .w20{
+                width: 20%;
+            }
+            .w60{
+                width: 58%;
+            }
+            .w100{
+                width: 100%;
+            }
+            .center{
+                text-align: center;
+            }
+            .hide{
+                display: none;
+                
+            }
+            .error{
+                color: red;
+            }
+            .clear{
+                clear: both;
+            }
+            
+            /*c1*/
+            .float.w20{
+                text-align: right;
+            }            
+            .float.w20.hide{
+                text-align: left;
+            }
+            /*c2*/
+            .float.w20:not(.hide){
+                text-align: right;
+                margin-right: 2%;
+            } 
+        </style>
+        
+        <script>
+            function clearError(){
+                var errorDivs = document.getElementsByClassName('hide');
+                for (var i=0; i<errorDivs.length; i++){
+                    errorDivs[i].style.display = 'none';
+                }
+            }
+            
+            function checkUsernameEmail(){
+                var input = document.getElementById('username');
+//                c1
+                if (input.value === '') {
+                    input.parentNode.nextElementSibling.style.display = 'block';
+                    input.parentNode.nextElementSibling.innerHTML = 'Vui long nhap username';
+                } 
+                else if (input.value.length < 8) {
+                    input.parentNode.nextElementSibling.style.display = 'block';
+                    input.parentNode.nextElementSibling.innerHTML = '8 ki tu';
+                }
+                
+//                c2
+                if (input.value === '') {
+                    input.parentNode.nextElementSibling.style.display = 'block';
+                    input.parentNode.nextElementSibling.innerHTML = 'Vui long nhap username';
+                    return;
+                } 
+                
+                if (input.value.length < 8) {
+                    input.parentNode.nextElementSibling.style.display = 'block';
+                    input.parentNode.nextElementSibling.innerHTML = '8 ki tu';
+                }
+                
+            }
+              function checkPassword(){
+                var input1 = document.getElementById('password');
+//                c1
+                if (input1.value === '') {
+                    input1.parentNode.nextElementSibling.style.display = 'block';
+                    input1.parentNode.nextElementSibling.innerHTML = 'Vui long nhap password';
+                } 
+                else if (input1.value.length < 8) {
+                    input1.parentNode.nextElementSibling.style.display = 'block';
+                    input1.parentNode.nextElementSibling.innerHTML = '8 ki tu';
+                }
+            }
+            function checkConfirmPassword(){
+                var input2 = document.getElementById('confirmpassword');
+//                c1
+                if (input2.value === '') {
+                    input2.parentNode.nextElementSibling.style.display = 'block';
+                    input2.parentNode.nextElementSibling.innerHTML = 'Vui long nhap password';
+                } 
+                else if (input2.value.length < 8) {
+                    input2.parentNode.nextElementSibling.style.display = 'block';
+                    input2.parentNode.nextElementSibling.innerHTML = '8 ki tu';
+                }
+            }
+             function checkMatchPassword(){
+                var input2 = document.getElementById('confirmpassword');
+                var input1 = document.getElementById('password');
+                if(input1.value.length !== input2.value.length){
+                    input2.parentNode.nextElementSibling.style.display = 'block';
+                    input2.parentNode.nextElementSibling.innerHTML = '9 ki tu'; 
+                }
+                }
+//                c1
+            function run(){
+                clearError();
+                
+                checkUsernameEmail();
+              checkPassword();
+            checkConfirmPassword();
+            checkMatchPassword();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="float w20">
+            username/email
+        </div>
+        <div class="float w60">
+            <input type="text" id="username">
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w20">
+            password
+        </div>
+        <div class="float w60">
+            <input type="password" id="password">
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w20">
+            confirm password
+        </div>
+        <div class="float w60">
+            <input type="password" id="confirmpassword">
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w20">
+            age
+        </div>
+        <div class="float w60">
+            <select>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+            </select>
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w20">
+            gender
+        </div>
+        <div class="float w60">
+            <input type="radio">Nam
+            <input type="radio">Nữ
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w20">
+            avatar
+        </div>
+        <div class="float w60">
+            <input type="file">
+        </div>
+        <div class="float w20 hide error">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+        
+        <div class="float w100 center">
+            <button onclick="run();">Run</button>
+        </div>
+        
+    </body>
+</html>

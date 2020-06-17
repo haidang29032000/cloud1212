@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+            function run(){
+          var input1 = document.getElementById('input1'); 
+          var input2 = document.getElementById('input2');
+          var so1 = parseInt(input1.value);
+          var so2 = parseInt(input2.value);
+          var tong = so1 + so2;
+          if (so2 !== parseInt(input2.value) || so1 !== parseInt(input1.value))
+          {alert("vui long nhap du so"); }
+              else{
+            alert("tong la" + tong);
+          }
+         
+           
+        }
+        
+  </script>
+    </head>
+    <body>
+        <div>
+            <input type='text' id="input1">
+        </div>
+        <div style="margin-top: 20px;">
+            <input  type='text' id="input2">
+        </div>
+        <div style='margin-top: 20px;'>
+            <button onclick="run();">Hien thi</button>
+        </div>
+    </body>
+</html>

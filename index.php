@@ -13,8 +13,8 @@
             <img src="logostore.jpg" alt="logo" class="logoanh">
             <ul>
                 <li><a href="#">LOGIN</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">PRODUCE</a></li>
+                <li><a href="ConnectToDB.php">Connect database</a></li>
+                <li><a href="DatabaseIndex.php">index database</a></li>
                 <li><a href="#">HOME</a></li>
                      
             </ul>
