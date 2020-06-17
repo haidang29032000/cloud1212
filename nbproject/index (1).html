@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function run(){
+             var input1 = document.getElementById('input1');
+             var input2 = document.getElementById('input2');
+             var input3 = document.getElementById('input3');
+                        
+             
+             if(input1.value.length < 8){
+                 alert('vui lòng nhập đủ chữ');
+             }
+             
+             if(input2.value.length !== input3.value.length ){
+                 alert('nhập lại mật khẩu');
+             }
+                 
+    }
+        </script>    
+    </head>
+    <body>
+        
+        <p id="dangky">Register</p>
+            <div id="username">
+                <div class="a">
+                    <lable for="username"> Username/email:  </lable>
+                </div>
+                <div>
+                    <input type="text" name="" placeholder="eg:example.com" id="input1" >
+                </div>
+            </div>   
+            <div id="Password">
+            <div class="a">    
+                <lable for="Password" >Password :</lable>
+            </div>    
+            <div>    
+                <input type="password" name="" placeholder="Enter Your Password" id="input2">
+            </div>
+            </div>
+            <div id="Confirm passworld">
+            <div class="a">    
+                <lable for="Confirm password" >Confirm passworld :</lable>
+            </div>
+            <div>    
+                <input type="password" name="" placeholder="Confirm your password" id="input3" >
+            </div>
+            </div>    
+            <div id="gender">
+            <div class="a">
+                <lable for="gender" >Gender :</lable>
+            </div>
+            <div>    
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+            </div>    
+            </div>     
+            <div id="Age">
+            <div class="a">
+                <lable for="age">Age :</lable> 
+            </div>
+            <div>    
+                <select>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                </select>
+            </div>
+            </div>      
+            <div id="avatar">    
+            <div class="a">    
+                <lable>Avatar :</lable>
+            </div>
+            <div>    
+                <input type="file">
+            </div>
+            </div>  
+                <div id="button">    
+                    <button onclick="run()">Create Account :</button>
+            </div>
+        
+    </body>
+</html>
